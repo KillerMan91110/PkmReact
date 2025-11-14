@@ -11,6 +11,8 @@ import Inventory from "./pages/Inventory.jsx";
 import Battle from "./pages/Battle.jsx";
 import Shop from "./pages/Shop.jsx";
 import PCBox from "./pages/PCBox.jsx";
+import GachaLobby from "./pages/GachaLobby.jsx";
+import GachaRoll from "./pages/GachaRoll.jsx";
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -71,6 +73,23 @@ export default function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/gacha"
+            element={
+              <PrivateRoute>
+                <GachaLobby />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/gacha/:boxId"
+            element={
+              <PrivateRoute>
+                <GachaRoll />
+              </PrivateRoute>
+            }
+          />
+          
         </Routes>
       </Router>
     </UserProvider>

@@ -100,6 +100,7 @@ export default function Navbar({ onAuthClick }) {
                   <button onClick={() => navigate("/team")}>Ver equipo</button>
                   <button onClick={() => navigate("/inventory")}>Inventario</button>
                   <button onClick={() => navigate("/shop")}>Tienda</button>
+                  <button onClick={() => navigate("/gacha")}>Gacha</button>
                   <button onClick={handleLogout}>Cerrar sesión</button>
                 </div>
               )}
